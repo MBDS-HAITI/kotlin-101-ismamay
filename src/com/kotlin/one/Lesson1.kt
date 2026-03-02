@@ -38,9 +38,15 @@ fun main() {
     // - If score between 50 and 60, print "Just passed!"
     // - If score between 61 and 99, print "Well done!"
 
-//    TODO(
-//        "Exercise 2 Conditionals implementation"
-//    )
+    val score: Int = 75   // Change la valeur pour tester
+
+    when {
+        score == 100 -> println("Perfect score!")
+        score < 0 || score > 100 -> println("Invalid score")
+        score in 0..49 -> println("You failed!")
+        score in 50..60 -> println("Just passed!")
+        score in 61..99 -> println("Well done!")
+    }
 
     // ✅ EXERCISE 3 list and Loops:
     // Create a list of your favorite fruits
@@ -48,18 +54,42 @@ fun main() {
     // Then, print the total number of fruits in the list
     // Ask the user to enter a fruit name and check if it's in the list
 
-//    TODO(
-//        "Exercise 3 List and Loops implementation"
-//    )
+    val fruits = listOf("apple", "banana", "mango", "orange")
+
+
+    println("Fruits in uppercase:")
+    for (fruit in fruits) {
+        println(fruit.uppercase())
+    }
+
+    // Print total number of fruits
+    println("\nTotal number of fruits: ${fruits.size}")
+
+    // Ask user to enter a fruit
+    print("\nEnter a fruit name: ")
+    val userInput = readLine()?.lowercase()
+
+    // Check if fruit exists in list
+    if (userInput != null && userInput in fruits) {
+        println("Yes, $userInput is in the list!")
+    } else {
+        println("Sorry, that fruit is not in the list.")
+    }
 
     // ✅EXERCISE 4 Elvis Operator:
     // Create a nullable variable `nickname` of type String? and assign it null
     // Print the number of characters in `nickname`
     // Print the nickname or "No nickname provided" if it's null using the Elvis operator
 
-//    TODO(
-//        "Exercise 4 Elvis Operator implementation"
-//    )
+    val nickname: String? = null
+
+    // Print number of characters
+    val length = nickname?.length ?: 0
+    println("Number of characters: $length")
+
+
+    val displayName = nickname ?: "No nickname provided"
+    println(displayName)
 
 }
 
