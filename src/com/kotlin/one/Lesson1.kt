@@ -1,4 +1,6 @@
-package com.android.one
+package com.android.com.kotlin.one
+
+import java.lang.IO.println
 
 fun main() {
 
@@ -15,12 +17,16 @@ fun main() {
     val city: String = "Paris"
     var temperature: Double = 22.5
 
-    println("It is $temperature°C in $city")
+    println("il fait $temperature degre C a $city")
 
-// Change temperature
+
     temperature = 25.0
 
-    println("It is $temperature°C in $city")
+    println("il fait $temperature degre C a $city")
+
+//    TODO(
+//        "Exercise 1 Variables implementation"
+//    )
 
 
     // ✅ EXERCISE 2 Conditionals:
@@ -41,7 +47,7 @@ fun main() {
     // Loop through the list and print each fruit in uppercase
     // Then, print the total number of fruits in the list
     // Ask the user to enter a fruit name and check if it's in the list
-//
+
 //    TODO(
 //        "Exercise 3 List and Loops implementation"
 //    )
