@@ -1,5 +1,8 @@
-package com.android.com.kotlin.one
+package com.kotlin.one
+
+import com.kotlin.one.game.Game
 
 fun main() {
-    TODO("Suivez les instructions dans le fichier README_03.md")
+    val game = Game()
+    game.start()
 }
