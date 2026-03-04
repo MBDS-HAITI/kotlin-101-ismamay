@@ -7,7 +7,7 @@ import com.kotlin.one.combat.Weapon
 class Magus(name: String) :
     Character(
         name = name,
-        health = 120,
+        initialHealth = 120,
         weapon = Weapon("Magic Staff", 10)
     ),
     Attacker,
@@ -28,7 +28,7 @@ class Magus(name: String) :
         if (!isAlive) return
 
         val healAmount = 15
-        target.health += healAmount
+        target.restoreHealth(healAmount)
 
         println("$name heals ${target.name} for $healAmount HP.")
     }

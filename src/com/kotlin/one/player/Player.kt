@@ -20,7 +20,7 @@ class Player(
         println("---- $name team status ----")
         for (character in team) {
             val status = if (character.isAlive) "Alive" else "Dead"
-            println("${character.name} - HP: ${character.health} - $status")
+            println("${character.name} (${character::class.simpleName}) - HP: ${character.health}/${character.maxHealth} - $status")
         }
         println("---------------------------")
     }

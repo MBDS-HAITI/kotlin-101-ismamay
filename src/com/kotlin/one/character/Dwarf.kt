@@ -6,7 +6,7 @@ import com.kotlin.one.combat.Weapon
 class Dwarf(name: String) :
     Character(
         name = name,
-        health = 80,
+        initialHealth = 80,
         weapon = Weapon("Battle Axe", 30)
     ),
     Attacker {

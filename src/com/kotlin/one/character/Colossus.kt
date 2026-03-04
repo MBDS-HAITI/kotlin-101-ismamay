@@ -6,7 +6,7 @@ import com.kotlin.one.combat.Weapon
 class Colossus(name: String) :
     Character(
         name = name,
-        health = 150,
+        initialHealth = 150,
         weapon = Weapon("Heavy Hammer", 15)
     ),
     Attacker {

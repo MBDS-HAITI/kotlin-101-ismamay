@@ -9,6 +9,7 @@ class Game {
     private lateinit var player1: Player
     private lateinit var player2: Player
     private var roundCount = 0
+    private val usedNames = mutableSetOf<String>()
 
     fun start() {
         println("=== Welcome to Battle Arena ===")
@@ -79,6 +80,10 @@ class Game {
 
             println("Enter character name:")
             val characterName = readln()
+            if (characterName in usedNames) {
+                println("this name is already taken. Choose another one.")
+                continue
+            }
 
             val character = when (typeName) {
                 "Warrior" -> Warrior(characterName)
@@ -89,6 +94,7 @@ class Game {
 
             player.team.add(character)
             usedTypes.add(typeName)
+            usedNames.add(characterName)
 
             println("$characterName the $typeName added to team.")
         }
